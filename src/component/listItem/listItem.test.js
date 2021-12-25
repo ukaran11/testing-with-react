@@ -17,4 +17,21 @@ describe('ListItem Component', () => {
             expect(propsError).toBeUndefined();
         })
     })
+
+    describe('Component Renders', () => {
+
+        let wrapper;
+        beforeEach(() => {
+            const props = {
+                title: 'Example Title',
+                desc: 'Some text'
+            };
+            wrapper = shallow(<ListItem {...props} />);
+        });
+
+        it('Should render without error', () => {
+            const component = findByTestAttr(wrapper, 'listItemComponent');
+            expect(component.length).toBe(1);
+        })
+    })
 })
