@@ -32,11 +32,16 @@ describe('ListItem Component', () => {
         it('Should render without error', () => {
             const component = findByTestAttr(wrapper, 'listItemComponent');
             expect(component.length).toBe(1);
-        })
+        });
 
         it('Should render a title', () => {
             const title = findByTestAttr(wrapper, 'componentTitle');
             expect(title.length).toBe(1);
-        })
+        });
+
+        it('Should render a desc', () => {
+            const desc = findByTestAttr(wrapper, 'componentDesc');
+            expect(desc.length).toBe(1);
+        });
     })
 })
