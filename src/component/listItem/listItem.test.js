@@ -33,5 +33,10 @@ describe('ListItem Component', () => {
             const component = findByTestAttr(wrapper, 'listItemComponent');
             expect(component.length).toBe(1);
         })
+
+        it('Should render a title', () => {
+            const title = findByTestAttr(wrapper, 'componentTitle');
+            expect(title.length).toBe(1);
+        })
     })
 })
