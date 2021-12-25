@@ -3,9 +3,14 @@ import PropTypes from 'prop-types';
 
 class ListItem extends Component {
     render() {
+        const { title, desc } = this.props;
+
         return (
-            <div>
-                
+            <div data-test="listItemComponent">
+                <h2 data-test="componentTitle">{title}</h2>
+                <div data-test="componentDesc">
+                    {desc}
+                </div>
             </div>
         )
     }
